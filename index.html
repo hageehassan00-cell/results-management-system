@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>نظام إدارة النتائج</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f0f0f0}
+.box{background:white;padding:20px;margin:20px;border-radius:10px}
+input{padding:10px;margin:5px;width:80%}
+button{padding:10px 20px;background:green;color:white;border:none;border-radius:5px}
+table{width:90%;margin:auto;background:white}
+td,th{border:1px solid #ccc;padding:8px}
+</style>
+</head>
+<body>
+<h1>نظام إدارة النتائج</h1>
+<div class="box">
+<input id="name" placeholder="اسم الطالب"><br>
+<input id="subject" placeholder="المادة"><br>
+<input id="grade" placeholder="الدرجة" type="number"><br>
+<button onclick="add()">إضافة</button>
+</div>
+<table id="t"><tr><th>الاسم</th><th>المادة</th><th>الدرجة</th></tr></table>
+<script>
+function add(){
+let n=document.getElementById('name').value;
+let s=document.getElementById('subject').value;
+let g=document.getElementById('grade').value;
+document.getElementById('t').innerHTML+=`<tr><td>${n}</td><td>${s}</td><td>${g}</td></tr>`;
+}
+</script>
+</body>
+                        </html>
